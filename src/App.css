@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.width {
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.my-nav {
+  height: 100px;
+  background-color: rgb(137, 236, 240);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.my-nav-first {
+  padding-left: 100px;
+  font-size: 30px;
+}
+
+.my-nav-last {
+  padding-right: 50px;
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+}
+
+.my-nav-last span {
+  font-size: 18px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 0 5px;
+  margin-left: -12px;
+}
+
+/* cart container style are here */
+
+.cart-container-part-one {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* cart item style */
+.cart-item {
+  margin-bottom: 12px;
+  height: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.cart-item .fas {
+  color: rgb(6, 136, 136);
 }
 
-.App-link {
-  color: #61dafb;
+.cart-item img {
+  width: 50%;
+}
+.cart-item-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cart-item-last button {
+  border: none;
+  background-color: inherit;
+  font-size: 20px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 400;
+}
+.remove {
+  margin-top: 5px;
+  background-color: inherit;
+  border: none;
+  color: rgb(7, 138, 138);
+  font-size: 12px;
+}
+.total {
+  margin-bottom: 50px;
+  font-size: 22px;
+
+  max-width: 100%;
+}
+@media only screen and (max-width: 720px) {
+  .my-nav {
+    height: 70px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .my-nav-first {
+    padding-left: 60px;
+    font-size: 26px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .price {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .name {
+    font-size: 13px;
+  }
+  .price {
+    font-size: 12px;
+  }
+
+  .remove {
+    font-size: 12px;
   }
 }
